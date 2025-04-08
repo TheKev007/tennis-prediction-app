@@ -129,10 +129,18 @@ def fetch_tennis_data():
             # Use sample data if no API key is provided
             return generate_sample_matches(15)
         
+        # Add robust error handling
+    try:
         response = requests.get(url, headers=headers)
-        
         if response.status_code == 200:
             data = response.json()
+            st.success("Successfully connected to Tennis Live Data API")
+        else:
+            st.warning(f"API returned status code {response.status_code}. Using sample data instead.")
+            return generate_sample_matches(15)
+    except Exception as e:
+        st.warning(f"Error accessing API: {e}. Using sample data instead.")
+        return generate_sample_matches(15)
             # Process the API response into our format
             matches = []
             
