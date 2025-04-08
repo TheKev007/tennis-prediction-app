@@ -120,7 +120,7 @@ def fetch_tennis_data():
         url = "https://tennis-live-data.p.rapidapi.com/matches/ATP/2023"
         
         headers = {
-            "X-RapidAPI-Key": "SIGN-UP-FOR-KEY",  # Replace with your actual API key
+            "X-RapidAPI-Key": "54e1c8f49dmsh42628ff197a7bbep1d5631jsn18cde015dae1",  # Replace with your actual API key
             "X-RapidAPI-Host": "tennis-live-data.p.rapidapi.com"
         }
         
