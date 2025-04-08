@@ -125,7 +125,7 @@ def fetch_tennis_data():
         }
         
         # Check if we should use the API or sample data
-        if headers["X-RapidAPI-Key"] == "SIGN-UP-FOR-KEY":
+        if headers["X-RapidAPI-Key"] == "54e1c8f49dmsh42628ff197a7bbep1d5631jsn18cde015dae1'":
             # Use sample data if no API key is provided
             return generate_sample_matches(15)
         
